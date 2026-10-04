@@ -1,154 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UltraVideoSave - 4K & 8K Video Downloader</title>
-  <meta name="description" content="UltraVideoSave - Fast online 4K and 8K video downloader for authorized direct video URLs.">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b1220;
-      color: white;
-      text-align: center;
-    }
+<title>UltraVideoSave - 4K & 8K Video Downloader</title>
 
-    .container {
-      max-width: 850px;
-      margin: auto;
-      padding: 50px 20px;
-    }
+<meta name="description" content="UltraVideoSave is a fast online 4K and 8K video downloader for authorized direct video URLs.">
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
+<style>
+*{
+  box-sizing:border-box;
+}
 
-    .subtitle {
-      font-size: 20px;
-      color: #cbd5e1;
-      margin-bottom: 35px;
-    }
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(135deg,#07111f,#101b32);
+  color:#fff;
+}
 
-    .box {
-      background: #111c31;
-      padding: 30px;
-      border-radius: 18px;
-    }
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:25px 18px 50px;
+}
 
-    input {
-      width: 100%;
-      padding: 17px;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      margin-bottom: 15px;
-    }
+header{
+  text-align:center;
+  padding:25px 0 35px;
+}
 
-    button {
-      width: 100%;
-      padding: 16px;
-      border: none;
-      border-radius: 10px;
-      background: #2563eb;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.logo{
+  font-size:34px;
+  font-weight:800;
+  letter-spacing:1px;
+}
 
-    button:hover {
-      background: #1d4ed8;
-    }
+.logo span{
+  color:#38bdf8;
+}
 
-    #message {
-      margin-top: 20px;
-      color: #cbd5e1;
-    }
+.tagline{
+  color:#cbd5e1;
+  margin-top:10px;
+  font-size:17px;
+}
 
-    .info {
-      margin-top: 35px;
-      line-height: 1.7;
-      color: #cbd5e1;
-    }
+.hero{
+  text-align:center;
+  padding:20px 0 30px;
+}
 
-    footer {
-      margin-top: 50px;
-      color: #94a3b8;
-      font-size: 14px;
-    }
-  </style>
+.hero h1{
+  font-size:38px;
+  margin:10px 0;
+}
+
+.hero p{
+  color:#cbd5e1;
+  font-size:17px;
+  line-height:1.6;
+}
+
+.downloader{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+input{
+  width:100%;
+  padding:17px;
+  border:0;
+  border-radius:12px;
+  font-size:16px;
+  outline:none;
+  margin-bottom:14px;
+}
+
+button{
+  width:100%;
+  padding:17px;
+  border:0;
+  border-radius:12px;
+  background:#0ea5e9;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#0284c7;
+}
+
+#message{
+  margin-top:18px;
+  color:#cbd5e1;
+  line-height:1.5;
+}
+
+.qualities{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+  margin-top:25px;
+}
+
+.quality{
+  background:#17243b;
+  padding:13px 5px;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:30px;
+}
+
+.feature{
+  background:#111d31;
+  padding:20px 12px;
+  border-radius:14px;
+}
+
+.feature h3{
+  margin:8px 0;
+}
+
+.feature p{
+  color:#94a3b8;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.notice{
+  margin-top:25px;
+  padding:15px;
+  background:#261b1b;
+  border-radius:12px;
+  color:#fecaca;
+  font-size:14px;
+  line-height:1.5;
+}
+
+footer{
+  text-align:center;
+  margin-top:40px;
+  color:#64748b;
+  font-size:13px;
+}
+
+@media(max-width:600px){
+  .hero h1{
+    font-size:29px;
+  }
+
+  .qualities{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <h1>UltraVideoSave</h1>
+<header>
+  <div class="logo">Ultra<span>VideoSave</span></div>
+  <div class="tagline">Fast 4K & 8K Video Downloader</div>
+</header>
 
-    <div class="subtitle">
-      Fast 4K & 8K Video Downloader
-    </div>
+<section class="hero">
+  <h1>Download High-Quality Videos</h1>
+  <p>
+    Paste an authorized direct video URL below and check
+    the available video quality.
+  </p>
+</section>
 
-    <div class="box">
+<section class="downloader">
 
-      <input
-        type="url"
-        id="videoUrl"
-        placeholder="Paste an authorized video URL here"
-      >
+  <input
+    type="url"
+    id="videoUrl"
+    placeholder="Paste your video URL here..."
+  >
 
-      <button onclick="analyzeVideo()">
-        Analyze Video
-      </button>
+  <button onclick="analyzeVideo()">
+    Analyze Video
+  </button>
 
-      <div id="message"></div>
+  <div id="message"></div>
 
-    </div>
-
-    <div class="info">
-      <h2>Download High-Quality Videos</h2>
-
-      <p>
-        UltraVideoSave is designed for downloading videos from
-        authorized direct media URLs.
-      </p>
-
-      <p>
-        Available quality options may include 720p, 1080p,
-        2K, 4K and 8K when provided by the source.
-      </p>
-
-      <p>
-        Adult or sexually explicit content is not supported.
-      </p>
-    </div>
-
-    <footer>
-      © 2026 UltraVideoSave. All rights reserved.
-    </footer>
-
+  <div class="qualities">
+    <div class="quality">720p</div>
+    <div class="quality">1080p</div>
+    <div class="quality">2K</div>
+    <div class="quality">4K</div>
+    <div class="quality">8K</div>
   </div>
 
-  <script>
-    function analyzeVideo() {
-      const url = document.getElementById("videoUrl").value.trim();
-      const message = document.getElementById("message");
+</section>
 
-      if (!url) {
-        message.textContent = "Please paste a video URL first.";
-        return;
-      }
+<section class="features">
 
-      message.textContent =
-        "Video analysis will be available after the download server is connected.";
-    }
-  </script>
+  <div class="feature">
+    <h3>⚡ Fast</h3>
+    <p>Simple and mobile-friendly video downloading experience.</p>
+  </div>
+
+  <div class="feature">
+    <h3>🎥 4K & 8K</h3>
+    <p>Choose high-quality formats when the original source provides them.</p>
+  </div>
+
+  <div class="feature">
+    <h3>📱 Mobile Friendly</h3>
+    <p>Designed to work smoothly on phones, tablets and computers.</p>
+  </div>
+
+</section>
+
+<div class="notice">
+  Adult or sexually explicit content is not supported.
+  Only authorized direct video URLs should be used.
+</div>
+
+<footer>
+  © 2026 UltraVideoSave — All rights reserved.
+</footer>
+
+</div>
+
+<script>
+function analyzeVideo(){
+
+  const url = document.getElementById("videoUrl").value.trim();
+  const message = document.getElementById("message");
+
+  if(!url){
+    message.textContent = "Please paste a video URL first.";
+    return;
+  }
+
+  message.textContent =
+    "URL received. Video analysis will be available after the secure download server is connected.";
+}
+</script>
 
 </body>
 </html>
