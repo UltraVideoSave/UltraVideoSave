@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UltraVideoSave - 4K & 8K Video Downloader</title>
+  <meta name="description" content="UltraVideoSave - Fast online 4K and 8K video downloader for authorized direct video URLs.">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #cbd5e1;
+      margin-bottom: 35px;
+    }
+
+    .box {
+      background: #111c31;
+      padding: 30px;
+      border-radius: 18px;
+    }
+
+    input {
+      width: 100%;
+      padding: 17px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    #message {
+      margin-top: 20px;
+      color: #cbd5e1;
+    }
+
+    .info {
+      margin-top: 35px;
+      line-height: 1.7;
+      color: #cbd5e1;
+    }
+
+    footer {
+      margin-top: 50px;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>UltraVideoSave</h1>
+
+    <div class="subtitle">
+      Fast 4K & 8K Video Downloader
+    </div>
+
+    <div class="box">
+
+      <input
+        type="url"
+        id="videoUrl"
+        placeholder="Paste an authorized video URL here"
+      >
+
+      <button onclick="analyzeVideo()">
+        Analyze Video
+      </button>
+
+      <div id="message"></div>
+
+    </div>
+
+    <div class="info">
+      <h2>Download High-Quality Videos</h2>
+
+      <p>
+        UltraVideoSave is designed for downloading videos from
+        authorized direct media URLs.
+      </p>
+
+      <p>
+        Available quality options may include 720p, 1080p,
+        2K, 4K and 8K when provided by the source.
+      </p>
+
+      <p>
+        Adult or sexually explicit content is not supported.
+      </p>
+    </div>
+
+    <footer>
+      © 2026 UltraVideoSave. All rights reserved.
+    </footer>
+
+  </div>
+
+  <script>
+    function analyzeVideo() {
+      const url = document.getElementById("videoUrl").value.trim();
+      const message = document.getElementById("message");
+
+      if (!url) {
+        message.textContent = "Please paste a video URL first.";
+        return;
+      }
+
+      message.textContent =
+        "Video analysis will be available after the download server is connected.";
+    }
+  </script>
+
+</body>
+</html>
